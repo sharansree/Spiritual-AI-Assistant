@@ -16,7 +16,7 @@ def retrieve_relevant_suttas(question: str, top_k: int = 5) -> list[dict]:
         'match_suttas',
         {
             'query_embedding': question_embedding,
-            'match_threshold': 0.3,
+            'match_threshold': 0.1,
             'match_count': top_k
         }
     ).execute()
