@@ -9,7 +9,10 @@ class Settings(BaseSettings):
     jwt_secret: str
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 10080
-    resend_api_key: str
+    smtp_host: str = "smtp-relay.brevo.com"
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
     from_email: str = "noreply@sathya.app"
     frontend_url: str = "http://localhost:3000"
 
