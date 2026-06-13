@@ -47,9 +47,8 @@ def register(request: Request, body: RegisterRequest):
         "email": body.email,
         "password_hash": hashed_password,
         "verification_token": verification_token,
-        "is_verified": False,
+        "is_verified": True,
     }).execute()
-    send_verification_email(body.email, verification_token, body.name)
     # send_verification_email(body.email, verification_token, body.name)
     return {"message": "Account created successfully. You can now sign in."}
 
