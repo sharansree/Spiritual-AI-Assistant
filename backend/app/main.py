@@ -20,7 +20,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://sathya-ai-guru.vercel.app",
+        "https://sathya-ten.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
