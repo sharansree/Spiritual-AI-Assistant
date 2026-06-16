@@ -83,7 +83,7 @@ export default function AskPage() {
         display: 'inline-block',
         animation: 'spin 3s linear infinite',
         lineHeight: 1
-      }}>☸</span>
+      }}>☸&#xFE0E;</span>
     </div>
   )
 
@@ -159,7 +159,7 @@ export default function AskPage() {
 
         {isLoading && (
           <div className={styles.loading}>
-            <div className={styles.loadingGlyph}>☸</div>
+            <div className={styles.loadingGlyph}>☸&#xFE0E;</div>
             <p className={styles.loadingText}>Searching the canon</p>
             <div style={{ display: 'flex', gap: 4, justifyContent: 'center', marginTop: 12 }}>
               <span className="loading-dot" />
@@ -194,7 +194,9 @@ export default function AskPage() {
                   {response.sources.map((s, i) => (
                     <div key={i} className={`${styles.source} ${styles.sourceAnimated}`}>
                       <span className={styles.sourceRef}>{s.reference}</span>
-                      <span className={styles.sourceTitle}>{s.title}</span>
+                      {s.title && s.title.toLowerCase() !== s.reference.toLowerCase() && (
+                        <span className={styles.sourceTitle}>{s.title}</span>
+                      )}
                       <span className={styles.sourceCollection}>{s.collection}</span>
                     </div>
                   ))}

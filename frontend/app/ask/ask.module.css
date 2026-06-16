@@ -10,20 +10,6 @@
     linear-gradient(160deg, #f7f1e6 0%, #f5ede0 40%, #f3ece2 70%, #f6f0e8 100%);
 }
 
-/* Subtle mandala watermark behind entire page */
-.layout::before {
-  content: '☸';
-  position: fixed;
-  font-size: 600px;
-  color: rgba(196, 146, 42, 0.03);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 0;
-  line-height: 1;
-}
-
 .nav {
   display: flex;
   align-items: center;
